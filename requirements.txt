@@ -1,3 +1,5 @@
-fabric3
 django
-django-restframework
+djangorestframework
+markdown
+db-templates
+git+ssh://git@github.com/x007007007/django-sites-switch.git#egg=django-sites-switch
