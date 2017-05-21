@@ -31,3 +31,17 @@ class Article(CreateModifyTime):
 
     def __str__(self):
         return "Article<{}>".format(self.name)
+
+    def get_html(self):
+        """
+        return html
+        :return:
+        """
+        if self.content_type == "md":
+            import markdown
+            return markdown.markdown(
+                self.content,
+                extensions = ['codehilite', 'fenced_code']
+            )
+        elif self.content_type == "html":
+            return self.content

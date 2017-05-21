@@ -48,9 +48,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
             ],
             'loaders': [
+                'dbtemplates.loader.Loader',
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
-                'dbtemplates.loader.Loader',
             ],
         },
     },
@@ -71,4 +71,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = "static/"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = "media/"
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]

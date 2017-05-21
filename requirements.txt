@@ -1,5 +1,5 @@
 django
 djangorestframework
 markdown
-db-templates
+git+ssh://git@github.com:x007007007/django-dbtemplates.git@catch_all_site＃django-dbtemplates
 git+ssh://git@github.com/x007007007/django-sites-switch.git#egg=django-sites-switch
